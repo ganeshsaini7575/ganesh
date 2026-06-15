@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLearn V3</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+            <h2>CodeLearn</h2>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search lessons...">
+        </div>
+
+        <ul class="menu-list">
+
+            <li onclick="showPage('home')">🏠 Home</li>
+
+            <li onclick="showPage('intro')">📘 Introduction</li>
+
+            <li onclick="showPage('basic')">📄 HTML Basic</li>
+
+            <li onclick="showPage('elements')">🧩 Elements</li>
+
+            <li onclick="showPage('attributes')">⚙ Attributes</li>
+
+            <li onclick="showPage('headings')">🔠 Headings</li>
+
+            <li onclick="showPage('paragraphs')">📑 Paragraphs</li>
+
+            <li onclick="showPage('styles')">🎨 Styles</li>
+
+            <li onclick="showPage('links')">🔗 Links</li>
+
+            <li onclick="showPage('images')">🖼 Images</li>
+
+            <li onclick="showPage('lists')">📋 Lists</li>
+
+            <li onclick="showPage('tables')">📊 Tables</li>
+
+            <li onclick="showPage('forms')">📝 Forms</li>
+
+            <li onclick="showPage('quiz')">❓ Quiz</li>
+
+            <li onclick="showPage('progress')">📈 Progress</li>
+
+            <li onclick="showPage('editor')">💻 Editor</li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+            <h2>CodeLearn V3</h2>
+
+            <div class="header-buttons">
+
+                <button id="darkModeBtn">
+                    🌙 Dark Mode
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- HOME -->
+        <section id="home" class="page active">
+
+            <div class="hero">
+
+                <h1>Learn HTML Easily</h1>
+
+                <p>
+                    Master HTML from beginner to advanced with examples,
+                    editor, quizzes and progress tracking.
+                </p>
+
+                <button class="primary-btn" onclick="showPage('intro')">
+                    Start Learning
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- INTRODUCTION -->
+        <section id="intro" class="page">
+
+            <h1>HTML Introduction</h1>
+
+            <ul>
+                <li>HTML stands for HyperText Markup Language.</li>
+                <li>HTML is used to create web pages.</li>
+                <li>HTML uses tags to define elements.</li>
+                <li>Browsers render HTML pages.</li>
+                <li>HTML works with CSS and JavaScript.</li>
+            </ul>
+
+            <div class="navigation-buttons">
+                <button onclick="previousPage('intro')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('intro')">
+                    Next ➡
+                </button>
+            </div>
+
+        </section>
+
+        <!-- BASIC -->
+        <section id="basic" class="page">
+
+            <h1>HTML Basic</h1>
+
+            <div class="lesson-card">
+
+                <h3>Example</h3>
+
+                <pre id="basicCode">
+&lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;p&gt;My First HTML Page&lt;/p&gt;
+</pre>
+
+                <button onclick="openEditor('basicCode')">
+                    Try It Yourself
+                </button>
+
+            </div>
+
+            <div class="navigation-buttons">
+                <button onclick="previousPage('basic')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('basic')">
+                    Next ➡
+                </button>
+            </div>
+        </section>
+
+        <!-- ELEMENTS -->
+        <section id="elements" class="page">
+
+            <h1>HTML Elements</h1>
+
+            <ul>
+                <li>Everything in HTML is an element.</li>
+                <li>Elements have opening and closing tags.</li>
+                <li>Some tags are self-closing.</li>
+                <li>Elements can contain content.</li>
+                <li>Elements can contain other elements.</li>
+            </ul>
+
+            <div class="navigation-buttons">
+                <button onclick="previousPage('elements')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('elements')">
+                    Next ➡
+                </button>
+            </div>
+
+        </section>
+
+        <!-- ATTRIBUTES -->
+        <section id="attributes" class="page">
+
+            <h1>HTML Attributes</h1>
+
+            <ul>
+                <li>Attributes provide extra information.</li>
+                <li>Attributes are written inside start tags.</li>
+                <li>href, src and alt are common attributes.</li>
+                <li>Attributes usually have values.</li>
+                <li>Example: href="page.html"</li>
+            </ul>
+
+            <div class="navigation-buttons">
+                <button onclick="previousPage('attributes')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('attributes')">
+                    Next ➡
+                </button>
+            </div>
+
+        </section>
+
+        <!-- HEADINGS -->
+        <section id="headings" class="page">
+
+            <h1>HTML Headings</h1>
+
+            <pre id="headingCode">
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+</pre>
+
+            <button onclick="openEditor('headingCode')">
+                Try It Yourself
+            </button>
+            <div class="navigation-buttons">
+                <button onclick="previousPage('headings')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('headings')">
+                    Next ➡
+                </button>
+            </div>
+        </section>
+
+        <!-- PARAGRAPHS -->
+        <section id="paragraphs" class="page">
+
+            <h1>HTML Paragraphs</h1>
+
+            <p>
+                Paragraphs are created using the p tag.
+            </p>
+
+            <div class="navigation-buttons">
+                <button onclick="previousPage('paragraphs')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('paragraphs')">
+                    Next ➡
+                </button>
+            </div>
+        </section>
+
+        <!-- STYLES -->
+        <section id="styles" class="page">
+
+            <h1>HTML Styles</h1>
+
+            <p>
+                The style attribute is used to apply CSS directly.
+            </p>
+
+            <div class="navigation-buttons">
+                <button onclick="previousPage('styles')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('styles')">
+                    Next ➡
+                </button>
+            </div>
+        </section>
+
+        <!-- LINKS -->
+        <section id="links" class="page">
+
+            <h1>HTML Links</h1>
+
+            <pre id="linkCode">
+&lt;a href="https://google.com"&gt;
+Visit Google
+&lt;/a&gt;
+</pre>
+
+            <button onclick="openEditor('linkCode')">
+                Try It Yourself
+            </button>
+
+            <div class="navigation-buttons">
+                <button onclick="previousPage('links')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('links')">
+                    Next ➡
+                </button>
+            </div>
+        </section>
+
+        <!-- IMAGES -->
+        <section id="images" class="page">
+
+            <h1>HTML Images</h1>
+
+            <pre>
+&lt;img src="image.jpg" alt="image"&gt;
+</pre>
+
+            <div class="navigation-buttons">
+                <button onclick="previousPage('images')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('images')">
+                    Next ➡
+                </button>
+            </div>
+        </section>
+
+        <!-- LISTS -->
+        <section id="lists" class="page">
+
+            <h1>HTML Lists</h1>
+
+            <ul>
+                <li>Ordered List</li>
+                <li>Unordered List</li>
+                <li>Description List</li>
+            </ul>
+
+            <div class="navigation-buttons">
+                <button onclick="previousPage('lists')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('lists')">
+                    Next ➡
+                </button>
+            </div>
+        </section>
+
+        <!-- TABLES -->
+        <section id="tables" class="page">
+
+            <h1>HTML Tables</h1>
+
+            <table border="1">
+
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+
+                <tr>
+                    <td>Ganesh</td>
+                    <td>20</td>
+                </tr>
+
+            </table>
+
+            <div class="navigation-buttons">
+                <button onclick="previousPage('tables')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('tables')">
+                    Next ➡
+                </button>
+            </div>
+        </section>
+
+        <!-- FORMS -->
+        <section id="forms" class="page">
+
+            <h1>HTML Forms</h1>
+
+            <form>
+
+                <input type="text" placeholder="Name">
+
+                <input type="email" placeholder="Email">
+
+                <button type="submit">
+                    Submit
+                </button>
+
+            </form>
+
+            <div class="navigation-buttons">
+                <button onclick="previousPage('forms')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('forms')">
+                    Next ➡
+                </button>
+            </div>
+        </section>
+
+        <!-- QUIZ -->
+        <section id="quiz" class="page">
+
+            <h1>HTML Quiz</h1>
+
+            <div class="quiz-box">
+
+                <p>
+                    What does HTML stand for?
+                </p>
+
+                <button onclick="checkQuiz(1)">
+                    HyperText Markup Language
+                </button>
+
+                <button onclick="checkQuiz(0)">
+                    Home Tool Markup Language
+                </button>
+
+                <button onclick="checkQuiz(0)">
+                    Hyper Transfer Machine Language
+                </button>
+
+                <p id="quizResult"></p>
+
+            </div>
+
+            <div class="navigation-buttons">
+                <button onclick="previousPage('quiz')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('quiz')">
+                    Next ➡
+                </button>
+            </div>
+        </section>
+
+        <!-- PROGRESS -->
+        <section id="progress" class="page">
+
+            <h1>Your Progress</h1>
+
+            <div class="progress-container">
+
+                <div id="progressBar">
+                    0%
+                </div>
+
+            </div>
+
+            <div class="navigation-buttons">
+                <button onclick="previousPage('progress')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('progress')">
+                    Next ➡
+                </button>
+            </div>
+        </section>
+
+        <!-- CODE EDITOR -->
+        <section id="editor" class="page">
+
+            <h1>Live Code Editor</h1>
+
+            <div class="editor-container">
+
+                <textarea id="codeArea"></textarea>
+
+                <iframe id="outputFrame"></iframe>
+
+            </div>
+
+            <div class="editor-buttons">
+
+                <button id="runBtn">
+                    Run Code
+                </button>
+
+                <button id="copyBtn">
+                    Copy Code
+                </button>
+
+                <button id="saveBtn">
+                    Save
+                </button>
+
+                <button id="resetBtn">
+                    Reset
+                </button>
+
+            </div>
+
+            <div class="navigation-buttons">
+                <button onclick="previousPage('editor')">
+                    ⬅ Previous
+                </button>
+
+                <button onclick="nextPage('editor')">
+                    Next ➡
+                </button>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
